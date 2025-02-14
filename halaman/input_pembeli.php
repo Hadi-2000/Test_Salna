@@ -12,8 +12,8 @@
     ?>
         <nav>
             <ul>
-                <li class="nav_left"><a href="../Index.php"><h3>Sabar Sakdremo</h3></a></li>
-                <li class="nav_right"><a href="../Index.php"><h3>Home</h3></a></li>
+                <li class="nav_left"><a href="../Index.html"><h3>Sabar Sakdremo</h3></a></li>
+                <li class="nav_right"><a href="../Index.html"><h3>Home</h3></a></li>
                 <li class="nav_right"><a href="Produk Kami.php"><h3>Produk Kami</h3></a></li>
                 <li class="nav_right nav-active"><a href="Tentang Kami.php"><h3>Tentang Kami</h3></a></li>
                 <li class="nav_right"><a href="Keranjang.php"><h3>Keranjang</h3></a></li>
