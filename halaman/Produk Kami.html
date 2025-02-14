@@ -29,10 +29,10 @@
                     while($hec = mysqli_fetch_assoc($hed)){
                     ?>
                     <td>
-                        <form action="detail_produk.php" method="POST">
+                        <form action="detail_produk.html" method="POST">
                         <input type="hidden" name="id_barang" value="<?=$hec['id']?>">
                         <a href="detail_produk.php">
-                            <img src="../img/barang.png" width="30%" height="120px" alt="produk 1">
+                            <img src="../img/barang.html" width="30%" height="120px" alt="produk 1">
                             <h3><?=$hec['nama'] ?></h3><br>
                             <p>Harga <?= $hec['harga']?> per kilo</p>
                             <p>Stock <?= $hec['stock']?> kg</p>
