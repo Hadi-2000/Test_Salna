@@ -14,9 +14,9 @@
             <ul>
                 <li class="nav_left nav-active"><a href="Index.html"><h3>Sabar Sakdremo</h3></a></li>
                 <li class="nav_right"><a href="Index.html"><h3>Home</h3></a></li>
-                <li class="nav_right"><a href="halaman/Produk Kami.php"><h3>Produk Kami</h3></a></li>
-                <li class="nav_right"><a href="halaman/Tentang Kami.php"><h3>Tentang Kami</h3></a></li>
-                <li class="nav_right"><a href="halaman/Keranjang.php"><h3>Keranjang</h3></a></li>
+                <li class="nav_right"><a href="halaman/Produk Kami.html"><h3>Produk Kami</h3></a></li>
+                <li class="nav_right"><a href="halaman/Tentang Kami.html"><h3>Tentang Kami</h3></a></li>
+                <li class="nav_right"><a href="halaman/Keranjang.html"><h3>Keranjang</h3></a></li>
             </ul>
         </nav>
         <!--Container-->
@@ -30,9 +30,9 @@
                     while($hec = mysqli_fetch_assoc($tamp)){
                     ?>
                     <td>
-                        <form action="halaman/detail_produk.php" method="POST">
+                        <form action="halaman/detail_produk.html" method="POST">
                         <input type="hidden" name="id_barang" value="<?=$hec['id']?>">
-                        <a href="halaman/detail_produk.php">
+                        <a href="halaman/detail_produk.html">
                             <img src="img/barang.png" width="30%" height="120px" alt="produk 1">
                             <h3><?=$hec['nama'] ?></h3><br>
                             <p>Harga <?= $hec['harga']?> per kilo</p>
