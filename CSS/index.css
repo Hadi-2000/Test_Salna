@@ -65,3 +65,14 @@ table{
     text-decoration: double;
     margin-bottom: 20px;
 }
+table a {
+    text-decoration: none;
+    color: black;
+}
+table a:hover {
+    color: blue;
+}
+form{
+    margin-left: 45%;
+}
+

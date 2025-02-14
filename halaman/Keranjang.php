@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../CSS/index.css">
     </head>
     <body>
+    <?php include_once "koneksi.php"; ?>
     <nav>
             <ul>
                 <li class="nav_left"><a href="../Index.php"><h3>Sabar Sakdremo</h3></a></li>
@@ -25,16 +26,11 @@
                 </th>
                 <tr>
                     <td>
-                        <img src="" width="20px" height="20px" alt="produk 1">
-                        <h3>Produk Parfum A</h3><br>
-                        <p>Parfum A adalah produk parfum yang...</p>
+                        <img src="../img/barang.png" width="50%" height="120px" alt="produk 1">
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="" width="20px" height="20px" alt="produk 2">
-                        <h3>Produk Parfum B</h3><br>
-                        <p>Parfum B adalah produk parfum yang...</p>
+                    <td> 
+                        <h3 class="judul">Produk Parfum A</h3><br>
+                        <p>Parfum A adalah produk parfum yang...</p>
                     </td>
                 </tr>
             </table>

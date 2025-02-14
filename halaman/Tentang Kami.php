@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../CSS/index.css">
     </head>
     <body>
+        <?php include_once "koneksi.php"; ?>
         <nav>
             <ul>
                 <li class="nav_left"><a href="../Index.php"><h3>Sabar Sakdremo</h3></a></li>

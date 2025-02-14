@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="CSS/index.css">
     </head>
     <body>
+        <?php include_once "halaman/koneksi.php";
+        $tamp = mysqli_query($conn, "select * from barang");
+        ?>
     <nav>
             <ul>
                 <li class="nav_left nav-active"><a href="Index.php"><h3>Sabar Sakdremo</h3></a></li>
@@ -21,38 +24,26 @@
         <h1 class="judul">Produk Kami</h1>
         <div>
             <table>
+                <th></th>
                 <tr>
+                    <?php
+                    while($hec = mysqli_fetch_assoc($tamp)){
+                    ?>
                     <td>
-                        <img src="img/barang.png" width="30%" height="60px" alt="produk 1">
-                        <h3>Beras Type Biru</h3><br>
-                        <p>Harga 12.600 per kilo</p>
-                        <p>Beras Type Biru adalah salah satu jenis beras yang pecahannya sedikit karena disaring.</p>
+                        <form action="halaman/detail_produk.php" method="POST">
+                        <input type="hidden" name="id_barang" value="<?=$hec['id']?>">
+                        <a href="halaman/detail_produk.php">
+                            <img src="img/barang.png" width="30%" height="120px" alt="produk 1">
+                            <h3><?=$hec['nama'] ?></h3><br>
+                            <p>Harga <?= $hec['harga']?> per kilo</p>
+                            <p>Stock <?= $hec['stock']?> kg</p>
+                            <p><?= $hec['deskripsi'] ?></p>
+                            <div style="height: 50px;"></div>
+                        </a>
+                        </form>
                     </td>
-                    <td>
-                        <img src="img/barang.png" width="30%" height="60px" alt="produk 2">
-                        <h3>Beras Type Merah</h3><br>
-                        <p>Harga 12.400 per kilo</p>
-                        <p>Beras Type Merah adalah salah satu jenis beras yang pecahannya dijadikan satu karena tidak disaring.</p>
-                    </td>
-                    <td>
-                        <img src="img/barang.png" width="30%" height="60px" alt="produk 3">
-                        <h3>Beras Type Hijau</h3><br>
-                        <p>Harga 12.200 per kilo</p>
-                        <p>Beras Type Hijau adalah salah satu jenis beras yang kualitas berasnya dibawah beras type merah.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    <img src="img/barang.png" width="30%" height="60px" alt="produk 3">
-                        <h3>Katul</h3><br>
-                        <p>Harga 4.500 per kilo</p>
-                        <p>Katul/Bekatul adalah hasil tambahan yang didapat dari proses mengubah pecah kulit menjadi beras</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="margin:20px"></div>
+                    <?php } ?>
+                </table>
         <!--Footer-->
         <div class="footer">Copyright 2025 Sabar Sakdremo</div>
     </body>
